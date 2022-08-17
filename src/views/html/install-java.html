@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en_GB">
+    <head>
+        <title>Scraft Launcher</title>
+        <link rel="stylesheet" href="../main.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <script src="../js/locale.js"></script> -->
+    </head>
+    <body>
+        <h1 style="padding: 0; border-bottom: 1px solid white">Install Java</h1>
+        <p>You can install Java here if it didn't was installed automatically.</p>
+        <br>
+        <div class="card_container" id="installation_card">
+            <span>Download Size: </span>
+            <span id="jTotal">Download has not started</span>
+        </div>
+        <div class="card_container" id="installation_card">
+            <span>Downloaded: </span>
+            <span id="jTransf">Download has not started</span>
+        </div>
+        <div class="card_container" id="installation_card">
+            <span>Java Version: </span>
+            <select id="javaw">
+                <option value="java17">Java 17 Full</option>
+                <option value="java8">Java 8 (Default)</option>
+                <option value="java17lite">Java 17 Lite (40MB)</option>
+            </select>
+        </div>
+
+        <button
+            class="btn-primary" id="javadload" onclick="installJava()">Install
+        </button>
+        <script>
+            setStatus();
+            function installJava() {
+                ipcRenderer.send('installJava',$('#javaw option:selected').val());
+                alertBox("Installing Java Now...", "warning");
+            }
+        </script>
+    </body>
+</html>    

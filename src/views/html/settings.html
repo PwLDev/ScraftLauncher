@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en_GB">
+    <head>
+        <title>Scraft Launcher</title>
+        <link rel="stylesheet" href="../main.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <script src="../js/locale.js"></script> -->
+    </head>
+    <body>
+        <h1 style="padding: 0; border-bottom: 1px solid white">Settings</h1>
+        <p>Customize your Scraft here!</p>
+        <br>
+        <div class="card_container" id="installation_card">
+            <span>Authentication Type: </span>
+            <select id="authType" onclick="setAuthType()">
+                <option id="offline" value="offline">Offline Account (Free)</option>
+                <option id="msft" value="msft">Microsoft Account</option>
+            </select>
+        </div>
+        <div class="card_container" id="installation_card">
+            <span>In-Game Username: </span>
+            <input placeholder="Steve" type="text" id="ingame_username">
+        </div><button class="btn-primary" onclick="saveSettings()">Save Settings</button>
+        <br>    
+        <div class="card_container" id="installation_card">
+            <span>Scraft Launcher Release Beta v0.1.3<br>Powered By Electron.JS and XMCL</span>
+        </div>
+        <div class="card_container" id="installation_card">
+            <span>
+                <b>Credits:</b><br>
+                Founder: sepi<br>
+                Developed by: PwlDev<br>
+                Inspired by: NotAngel and Rajdeep<br>
+                Supported by: You 💖
+            </span>
+        </div>
+        <div class="card_container danger" id="installation_card" style="background-color: red;">
+            <span>Danger Zone!</span>
+        </div>
+        <button class="btn-primary danger" onclick="purgeData()">Delete all Data and Restart</button>
+    </body>
+</html>
