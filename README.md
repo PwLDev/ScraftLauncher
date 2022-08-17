@@ -17,7 +17,7 @@ It is only available for Windows but next update we will include Linux support!
 >>
 >> To download from Google Drive (.exe) Installer
 >
->> - ## Method 2: Clone the repo
+>> - ## Method 2: Manual Installation
 >>
 >> This is for a more advanced debugging
 >>
@@ -30,7 +30,8 @@ It is only available for Windows but next update we will include Linux support!
 >> 
 >> - Step 2: Install all dependencies
 >>
->> Using ```sh
+>> Using
+>> ```sh
 >> npm i
 >> ```
 >>
