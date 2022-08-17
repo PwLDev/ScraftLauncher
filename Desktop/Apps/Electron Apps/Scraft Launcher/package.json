@@ -1,0 +1,63 @@
+{
+  "name": "scraft-launcher",
+  "version": "0.1.3",
+  "description": "The New & Best launcher for Minecraft",
+  "productName": "ScraftLauncher",
+  "main": "src/main.js",
+  "author": "PwLDev & sepi",
+  "license": "MIT",
+  "dependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@xmcl/core": "^2.9.0",
+    "@xmcl/installer": "^3.2.2",
+    "@xmcl/model": "^1.0.22",
+    "@xmcl/user": "^2.1.7",
+    "adm-zip": "^0.5.9",
+    "checksum": "^1.0.0",
+    "data-store": "^3.1.0",
+    "discord-rpc": "^4.0.1",
+    "eslint": "^8.10.0",
+    "jquery": "^3.6.0",
+    "minecraft-launcher-core": "^3.16.13",
+    "msmc": "^3.0.6",
+    "node-fetch": "2",
+    "npm": "^8.15.0",
+    "request": "^2.88.2",
+    "request-progress": "^3.0.0",
+    "three": "^0.142.0",
+    "toastr": "^2.1.4",
+    "typescript": "^4.6.2",
+    "unzipper": "^0.10.11",
+    "update": "^0.7.4",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "dev": "set APP_DEV=true && electron .",
+    "start-win": "npm run buildtsc && set APP_DEV=true && electron .",
+    "start-linux": "APP_DEV=true && electron .",
+    "build": "electron-builder",
+    "buildtsc": "tsc && npm run lint",
+    "lint": "npx eslint --fix"
+  },
+  "build": {
+    "appId": "gq.pwl-yt.scraftlauncher",
+    "productName": "Scraft Launcher",
+    "icon": "src/assets/icon.ico",
+    "win": {
+      "asar": true,
+      "target": "nsis",
+      "icon": "src/assets/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "snap",
+        "AppImage"
+      ],
+      "category": "Game"
+    }
+  },
+  "devDependencies": {
+    "electron": "^6.1.12"
+  }
+}

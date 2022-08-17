@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en_GB">
+    <head>
+        <title>Scraft Launcher</title>
+        <link rel="stylesheet" href="../main.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <script src="../js/locale.js"></script> -->
+    </head>
+    <body>
+        <h1 style="padding: 0; border-bottom: 1px solid white">Scraft Launcher</h1>
+        <p>The New & Best Minecraft Launcher. Secured by SecurityCraft Platform</p>
+        <br>
+        <a class="btn-primary" onclick='openView("add-installation.html");'>Add Installation +</a><br>
+
+        <div id="installationsdiv" style="margin-top: 30px; height: 420px; overflow-y: scroll;"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+            ipcRenderer.send('getInstallations');
+            setTimeout(function () {
+                if ($("#installationsdiv").is(":empty")) {
+                    $("#installationsdiv").append(`
+                        <h3>Steve is sad, because you haven't created any installation :(<br>Why don't you create one?</h3>
+                        <img style="width: 377px; height: 328px" src="../assets/sadsteve.jpg"/>
+                    `)
+                } else return;
+            }, 500);
+        </script> 
+    </body>
+</html>
