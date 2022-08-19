@@ -4,3 +4,4 @@ dist
 arraytest.js
 index.js
 tsconfig.json
+package-lock.json
