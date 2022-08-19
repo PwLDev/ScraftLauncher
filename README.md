@@ -56,3 +56,4 @@ It is only available for Windows but next update we will include Linux support!
 - Supported by: You <3
 
 © Copyright 2019 SmartElectron
+© Copyright 2022 Scraft Team
